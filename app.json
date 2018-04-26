@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/begin/begin",
+    "pages/test/test",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/viewstudent/viewstudent",
+    "pages/viewteacher/viewteacher",
+    "pages/viewparent/viewparent",
+    "pages/result/result",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#708090",
+    "navigationBarTitleText": "答题小王者",
+    "navigationBarTextStyle": "black"
+  }
+}

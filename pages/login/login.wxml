@@ -1,0 +1,67 @@
+<view class="container">
+
+  <text class="user-motto">欢迎登录</text>
+  <view class="userinfo">
+    <image class="user-img" src="../../image/logo.jpg" background-size="cover"></image>
+  </view> 
+  <form bindsubmit="loginUser">
+    <view class="serviceFunction">
+      <view style="border-bottom: 1px solid #ddd;">
+        <view>
+          <image class="leftIcon" src="../../image/username.png"></image>
+          <view class="section section_gap">
+            <view class="section__title">用户名：</view>
+            <input name="user" placeholder="输入账号" value="{{realname}}" />
+          </view>
+        </view>
+      </view>
+      <view style="border-bottom: 1px solid #ddd;">
+        <view>
+          <image class="leftIcon" src="../../image/password.png"></image>
+          <view class="section section_gap">
+            <view class="section__title">
+              <text decode='{{true}}'>密&nbsp;&nbsp;&nbsp;码：</text>
+            </view>
+            <input name="password" placeholder="输入密码" value="{{password}}" password="true" />
+          </view>
+        </view>
+      </view>
+      <view class="boundary2" style="height:30rpx;" />
+
+<!-- 选择登录身份-->
+<view class="radioView" style="position:relative;left:15%;">
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}" wx:key="id">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+</view>
+
+<view class='BtnView'>
+      <view class='leftBtn' >
+        <button formType="submit" class="button1">
+          <text style="position:relative;top:-15rpx;">登录</text>
+        </button>
+      </view>
+
+      
+      <view class='rightBtn'>
+        <button bindtap="toRegister" class="button1">
+          <text style="position:relative;top:-15rpx;">注册</text>
+        </button>
+      </view>
+      </view>
+    </view>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+</view>

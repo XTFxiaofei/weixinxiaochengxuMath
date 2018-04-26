@@ -1,0 +1,73 @@
+<text class="user-motto">欢迎注册账号</text>
+<view class="userinfo">
+  <image class="user-img" src="../../image/logo.jpg" background-size="cover"></image>
+</view>
+<form bindsubmit="registerUser">
+  <view class="serviceFunction">
+    <view>
+      <view> 
+        <image class="leftIcon" src="../../image/username.png"></image>
+        <view class="section section_gap">
+          <view class="section__title">用户名：</view>
+          <input name="user" placeholder="输入账号（必填）" />
+        </view>
+      </view>
+      <image class="leftIcon2" src="../../image/rigt.png"></image>
+    </view>
+    <view>
+      <view>
+        <image class="leftIcon" src="../../image/password.png"></image>
+        <view class="section section_gap">
+          <view class="section__title">
+            <text decode='true'>密&nbsp;&nbsp;&nbsp;码：</text>
+          </view>
+          <input name="password" placeholder="输入密码（必填）" password="true" />
+        </view>
+      </view>
+      <image class="leftIcon2" src="../../image/rigt.png"></image>
+    </view>
+    <view>
+      <view>
+        <image class="leftIcon" src="../../image/passwords.png"></image>
+        <view class="section section_gap">
+          <view class="section__title">确认密码:</view>
+          <input name="confirmpassword" placeholder="确认密码（必填）" password="true" />
+        </view>
+      </view>
+      <image class="leftIcon2" src="../../image/rigt.png"></image>
+    </view>
+
+
+    <!-- 老师选择器 -->
+    <view class="section" style="display:{{selectHidden}}">
+      <view class="section__title">选择老师:</view>
+      <picker bindchange="teacherPickerChange" value="{{index}}" range="{{arrayteacher}}">
+        <view class="picker" style="position:relative;right:300%;">
+          {{arrayteacher[teacherid]}}
+        </view>
+      </picker>
+    </view>
+    <!-- 家长选择器 -->
+    <view class="section" style="display:{{selectHidden}}">
+      <view class="section__title">选择家长:</view>
+      <picker bindchange="parentPickerChange" value="{{parentid}}" range="{{arrayparent}}">
+        <view class="picker" style="position:relative;right:300%;">
+          {{arrayparent[parentid]}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 选择登录身份-->
+    <view class="radioView" >
+      <radio-group class="radio-group" bindchange="radioChange" style="position:relative;left:20%;">
+        <label class="radio" wx:for="{{items}}" wx:key="id">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </radio-group>
+    </view>
+    <view class="boundary2" style="height:30rpx;" />
+    <button class="button1" formType="submit">
+      <text style="position:relative;top:-16rpx;">提交</text>
+    </button>
+  </view>
+</form>

@@ -1,0 +1,59 @@
+.container{
+  padding: 50rpx 0;
+}
+
+input {
+  float: left;
+  border: 1px solid #405f80;
+  height: 80rpx;
+  width: 79%;
+}
+.searchbtn{
+  background:green;
+  color: #FFFFFF;
+  height:80rpx;
+  width: 20%;
+}
+.textstyle{
+  margin-top: 25rpx;
+
+}
+
+.list{
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 25rpx;
+}
+
+.list-a{
+  width:24%;
+}
+
+.usermotto{
+  margin-top: 30rpx;
+  text-align: center;
+  margin-bottom: 15rpx;
+}
+
+.list-all{
+  width:100%; 
+  margin-top:20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.optionbutton{
+  margin-top: 50rpx;
+}
+
+.search{
+  width: 100%;
+  margin-top: 50rpx;
+}
+
+page{
+  width: 100%;
+  height: auto;
+}

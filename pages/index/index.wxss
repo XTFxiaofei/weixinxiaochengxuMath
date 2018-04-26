@@ -1,0 +1,154 @@
+.times{
+  position: relative;
+  left: 240px;
+  font-size:18px;
+  color:blue;
+}
+
+.warp{
+  height: 100%;
+  width: 100%; 
+}
+
+/* pages/question/question.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+.outer{
+  position: absolute;
+  left: 0rpx;
+  top: 10rpx;
+  height: 100%;
+  width: 100%;
+}
+
+.question-img{
+  width:100%;
+  margin-top:20rpx;
+  background-color: #FFFFFF;
+}
+
+.question-text{
+  width: 100%;
+  margin-top:20rpx;
+  line-height: 80rpx;
+  background-color: #FFFFFF;
+}
+
+.img-back{
+  width: 55rpx;
+  height: 55rpx;
+  margin: 20rpx;
+}
+
+.img{
+  width: 100%;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  margin-top: 15rpx;
+}
+
+.title-text{
+  text-align: center;
+  font-size: 60rpx;
+  font-weight: bolder;
+  margin-left: 200rpx;
+}
+
+#describe{
+  margin: 1rem;
+  color: black;
+}
+
+#answer{
+  margin-bottom: 2rem
+}
+
+radio{
+  margin: 10px;
+  width: 100%
+}
+
+radio .wx-radio-input.wx-radio-input-checked{
+  border: none;
+  background: red;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before{
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background: rgb(67, 82, 163);
+  transform: translate(-50%,-50%) scale(1.3);
+  -webkit-transform: translate(-50%,-50%) scale(1.3)
+}
+
+.item{
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.item2{
+  min-height: 100rpx;
+  max-height: 100rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.item:active{
+  background: lightblue;
+  margin:20rpx;
+  border-radius: 15rpx;
+  font-weight: bold;
+  color: rgba(67, 82, 163, 0.9);
+}
+
+.item-ui{
+  width:100%;
+  height:125rpx;
+  background-color: #FFFFFF;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  display: flex;
+  align-items: center;
+}
+
+#confirm:active{
+  background: lightblue
+}
+
+.image-wr{
+  max-height: 75rpx;
+  max-width: 75rpx;
+  min-height: 50px;
+  min-width: 50rpx;
+}
+
+button{
+  margin-top: 100rpx;
+  color:#FFFFFF;
+  width: 90%;
+  background-color:green;
+}
+
+
+
+

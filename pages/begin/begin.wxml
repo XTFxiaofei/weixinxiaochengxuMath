@@ -1,0 +1,23 @@
+
+<view class="container">
+
+  <view>
+    <image class="userinfo-avatar" src="../../image/logo.jpg" background-size="cover"></image>
+  </view>
+
+
+
+  <view class="usermotto" bindtap='beginttest'>
+    <test class="user-motto" style="top:-550rpx;">开始测试</test>
+  </view>
+
+  <view class="BtnView">
+    <button class='button1' bindtap="toLogin">
+      <text style="position:relative;top:-12rpx;">登录</text>
+    </button>
+    <button class="registerBtn button1" bindtap="toRegister">
+      <text style="position:relative;top:-12rpx;">注册</text>
+    </button>
+  </view>
+
+</view>

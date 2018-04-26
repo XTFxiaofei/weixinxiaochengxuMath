@@ -1,0 +1,64 @@
+<view class="container">
+  <view>
+    <text sytle="float:left;">你好，{{teachername}}</text>
+  </view>
+  <view class="search">
+    <form bindsubmit="searchStudent">
+      <input name="user" class="searchinput" placeholder="输入学生姓名" />
+      <button formType="submit" class="searchbtn">
+        <text style="position:relative;top:-15rpx;color: #FFFFFF;">搜索</text>
+      </button>
+    </form>
+  </view>
+</view>
+
+<view class="usermotto">
+  <text class="user-motto">您的学生成绩如下：</text>
+</view>
+
+
+<!-- 所有学生分数  -->
+<view class="list-all">
+
+  <view class="list">
+    <view class="list-a">
+      <text>姓名</text>
+    </view>
+    <view class="list-a">
+      <text>成绩</text>
+    </view>
+    <view class="list-a">
+      <text>用时</text>
+    </view>
+  </view>
+  <!-- 搜索内容-->
+  <view wx:if="{{studentuser.length>0}}" class="list">
+    <view class="list-a">
+      <text class="textstyle">{{studentuser}}</text>
+    </view>
+    <view class="list-a">
+      <text class="textstyle">{{studentscore}}</text>
+    </view>
+    <view class="list-a">
+      <text class="textstyle">{{studenttime}}</text>
+    </view>
+  </view>
+
+  <!--模板  -->
+  <template name="itmes">
+    <view class="list-a">
+      <text>{{user}}</text>
+    </view>
+    <view class="list-a">
+      <text>{{score}}</text>
+    </view>
+    <view class="list-a">
+      <text>{{time}}</text>
+    </view>
+  </template>
+  <!--循环输出列表 begin-->
+  <view wx:for="{{studentlist}}" wx:key="{{id}}" class="list" wx:if="{{studentuser.length==0}}">
+    <template is="itmes" class="list-a" data="{{...item}}" />
+  </view>
+
+</view>

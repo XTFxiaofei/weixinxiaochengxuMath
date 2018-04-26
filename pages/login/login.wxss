@@ -1,0 +1,130 @@
+
+.container{
+  padding: 200rpx 0;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30rpx;
+}
+.user-img{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 30rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.user-motto{
+  margin-top: 60rpx;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 20px;
+}
+.usermotto input{
+  color: #000;
+  margin-bottom: 10px;
+  background-color: gainsboro;
+  
+}
+.style-input{
+  height: 2.2rem;
+}
+.style-button{
+  margin-bottom: 10px;
+  background-color: green;
+}
+
+
+.serviceFunction {
+  width: 100%;
+}
+
+.serviceFunction>view {
+  width: 100%;
+  height: 100rpx;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 34rpx;
+}
+
+.leftIcon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  position: relative;
+  top:50rpx;
+}
+.leftIcon2 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+
+}
+.section{
+    margin-bottom: 25rpx;
+}
+.section_gap{
+  
+    padding: 0 30rpx;
+}
+.section__title{
+    float: left;
+    margin-bottom: 16rpx;
+    padding-left: 60rpx;
+    padding-right: 30rpx;
+}
+.section_gap .section__title{
+    padding-left: 60rpx;
+    padding-right: 0;
+}
+.button1{ 
+    color:#FFFFFF;
+    background-color:green;
+    height:75rpx;
+}
+.button1:active{
+    background-color:chartreuse;
+}
+
+.radioView{
+margin-left: 20rpx;
+}
+.BtnView{
+  margin-top: 40rpx;
+   display: flex;  
+flex-direction: row;
+}
+.leftBtn{
+margin-left: 80rpx;
+}
+.rightBtn{
+margin-right: 80rpx;
+}
+
+page{
+    background-color: #F5F5F5;
+}
+
+.container{
+    background-color: #F5F5F5;
+}

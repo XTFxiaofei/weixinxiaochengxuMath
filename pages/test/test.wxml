@@ -1,0 +1,118 @@
+<view class="container">
+
+  <view class='outer'>
+    <!--标题  -->
+    <view id='describes'>
+      <view class="text-question">
+        <view>
+          <image class="img-cancel" src="../../image/cancel.png" bindtap='image_cancel'></image>
+        </view>
+        <view class="text-word">
+          <text>第</text>
+          <text class='text1'>{{index+1}}/10</text>
+          <text>题</text>
+        </view>
+        <view>
+          <image class="img-again" src="../../image/again.png"  bindtap='image_again'></image>
+        </view>
+      </view>
+
+      <view style="background-color:#FFFFFF;width:100%;">
+        <!--问题-图片  -->
+        <view class="question-img" wx:if="{{titleimg[list[index]].length>0}}">
+          <image class="img" src="{{titleimg[list[index]]}}" mode="widthFix"></image>
+        </view>
+        <!--问题-文字  -->
+        <view class="question-text" wx:elif="{{title[list[index]].length>0}}">
+          <text decode='{{true}}'>&nbsp;&nbsp;&nbsp;&nbsp;{{title[list[index]]}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--选项  -->
+    <view id='answer'>
+      <radio-group bindchange='select' data-whichquestion="{{[list[index]]}}">
+
+        <view class="item-ui" wx:if="{{choice[list[index]][radios[0]+'img'].length>0||choice[list[index]][radios[0]].length>0}}">
+          <view wx:if="{{choice[list[index]][radios[0]+'img'].length>0}}" class="item">
+            <radio value='{{radios[0]}}' checked='{{clear}}'>
+              <image src="{{choice[list[index]][radios[0]+'img']}}" bindload="imageLoad2" data-index="{{ index }}" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;margin-left:9rpx;"></image>
+            </radio>
+          </view>
+          <view wx:elif="{{choice[list[index]][radios[0]].length>0}}" class="item">
+            <radio value='{{radios[0]}}' checked='{{clear}}'>
+              <text decode='{{true}}'>&nbsp;{{choice[list[index]][radios[0]]}}</text>
+            </radio>
+          </view>
+        </view>
+
+        <view class="item-ui" wx:if="{{choice[list[index]][radios[2]+'img'].length>0||choice[list[index]][radios[2]].length>0}}">
+          <view wx:if="{{choice[list[index]][radios[2]+'img'].length>0}}" class="item">
+            <radio value='{{radios[2]}}' checked='{{clear}}'>
+              <image src="{{choice[list[index]][radios[2]+'img']}}" bindload="imageLoad2" data-index="{{ index }}" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;margin-left:9rpx;"></image>
+            </radio>
+          </view>
+          <view wx:elif="{{choice[list[index]][radios[2]].length>0}}" class="item">
+            <radio value='{{radios[2]}}' checked='{{clear}}'>
+              <text decode='{{true}}'>&nbsp;{{choice[list[index]][radios[2]]}}</text>
+            </radio>
+          </view>
+        </view>
+
+        <view class="item-ui" wx:if="{{choice[list[index]][radios[1]+'img'].length>0||choice[list[index]][radios[1]].length>0}}">
+          <view wx:if="{{choice[list[index]][radios[1]+'img'].length>0}}" class="item">
+            <radio value='{{radios[1]}}' checked='{{clear}}'>
+              <image src="{{choice[list[index]][radios[1]+'img']}}" bindload="imageLoad2" data-index="{{ index }}" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;margin-left:9rpx;"></image>
+            </radio>
+          </view>
+          <view wx:elif="{{choice[list[index]][radios[1]].length>0}}" class="item">
+            <radio value='{{radios[1]}}' checked='{{clear}}'>
+              <text decode='{{true}}'>&nbsp;{{choice[list[index]][radios[1]]}}</text>
+            </radio>
+          </view>
+        </view>
+
+        <view class="item-ui" wx:if="{{choice[list[index]][radios[3]+'img'].length>0||choice[list[index]][radios[3]].length>0}}">
+          <view wx:if="{{choice[list[index]][radios[3]+'img'].length>0}}" class="item">
+            <radio value='{{radios[3]}}' checked='{{clear}}'>
+              <image src="{{choice[list[index]][radios[3]+'img']}}" bindload="imageLoad2" data-index="{{ index }}" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;margin-left:9rpx;"></image>
+            </radio>
+          </view>
+          <view wx:elif="{{choice[list[index]][radios[3]].length>0}}" class="item">
+            <radio value='{{radios[3]}}' checked='{{clear}}'>
+              <text decode='{{true}}'>&nbsp;{{choice[list[index]][radios[3]]}}</text>
+            </radio>
+          </view>
+        </view>
+
+        <view class="item-ui" wx:if="{{choice[list[index]][radios[4]+'img'].length>0||choice[list[index]][radios[4]].length>0}}">
+          <view wx:if="{{choice[list[index]][radios[4]+'img'].length>0}}" class="item">
+            <radio value='{{radios[4]}}' checked='{{clear}}'>
+              <image src="{{choice[list[index]][radios[4]+'img']}}" bindload="imageLoad2" data-index="{{ index }}" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;margin-left:9rpx;"></image>
+            </radio>
+          </view>
+          <view wx:elif="{{choice[list[index]][radios[4]].length>0}}" class="item">
+            <radio value='{{radios[4]}}' checked='{{clear}}'>
+              <text decode='{{true}}'>&nbsp;{{choice[list[index]][radios[4]]}}</text>
+            </radio>
+          </view>
+        </view>
+
+        <view class="item-ui" wx:if="{{choice[list[index]][radios[5]+'img'].length>0||choice[list[index]][radios[5]].length>0}}">
+          <view wx:if="{{choice[list[index]][radios[5]+'img'].length>0}}" class="item">
+            <radio value='{{radios[5]}}' checked='{{clear}}'>
+              <image src="{{choice[list[index]][radios[5]+'img']}}" bindload="imageLoad2" data-index="{{ index }}" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;margin-left:9rpx;"></image>
+            </radio>
+          </view>
+          <view wx:elif="{{choice[list[index]][radios[5]].length>0}}" class="item">
+            <radio value='{{radios[5]}}' checked='{{clear}}'>
+              <text decode='{{true}}'>&nbsp;{{choice[list[index]][radios[5]]}}</text>
+            </radio>
+          </view>
+        </view>
+
+      </radio-group>
+    </view>
+  </view>
+
+</view>

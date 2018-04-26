@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view>
+    <text>欢迎您，{{user}}</text>
+  </view>
+  <view>
+    <text>上一次分数为：{{score}}分</text>
+  </view>
+  <view>
+    <text>上一次用时为：{{time}}</text>
+  </view>
+      <view class="usermotto" bindtap='beginttest'>
+    <test class="user-motto" style="top:-550rpx;">开始测试</test>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+<view class="container">
+
+  <view class="usermotto">
+    <text class="user-motto">欢迎您，{{parentname}}</text>
+  </view>
+
+  <view class="usermotto">
+    <text class="user-motto">您的孩子成绩如下：</text>
+  </view>
+
+  <view class="list-all">
+    <view class="list">
+      <view class="list-a">
+        <text>姓名</text>
+      </view>
+      <view class="list-a">
+        <text>成绩</text>
+      </view>
+      <view class="list-a">
+        <text>用时</text>
+      </view>
+    </view>
+    <template name="itmes">
+      <view class="list-a">
+        <text>{{user}}</text>
+      </view>
+      <view class="list-a">
+        <text>{{score}}</text>
+      </view>
+      <view class="list-a">
+        <text>{{time}}</text>
+      </view>
+    </template>
+    <!--循环输出列表 begin-->
+    <view wx:for="{{studentlist}}" wx:key="{{id}}" class="list">
+      <template is="itmes" class="list-a" data="{{...item}}" />
+    </view>
+  </view>
+</view>
